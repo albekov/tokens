@@ -20,9 +20,12 @@ function App() {
   const textData = useMemo(() => {
     if (!debouncedText) return undefined;
     const tokens = enc.encode(debouncedText);
+    const tokensCount = tokens.length;
+    const uniqueTokensCount = new Set(tokens).size;
     return {
       length: debouncedText.length,
-      tokens: tokens,
+      tokensCount,
+      uniqueTokensCount,
     };
   }, [debouncedText]);
 
@@ -52,7 +55,13 @@ function App() {
                 <Text span fw={700}>
                   Tokens:
                 </Text>{" "}
-                <Text span>{textData.tokens.length}</Text>
+                <Text span>{textData.tokensCount}</Text>
+              </Box>
+              <Box mb="sm">
+                <Text span fw={700}>
+                  Unique Tokens:
+                </Text>{" "}
+                <Text span>{textData.uniqueTokensCount}</Text>
               </Box>
             </>
           )}
