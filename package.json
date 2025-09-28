@@ -1,0 +1,28 @@
+{
+  "name": "tokens",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "check": "tsc --build ./tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.4",
+    "@types/react": "19.1.14",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "5.0.4",
+    "globals": "16.4.0",
+    "sass-embedded": "1.93.2",
+    "typescript": "5.9.2",
+    "vite": "7.1.7"
+  }
+}
