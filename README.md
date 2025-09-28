@@ -1,1 +1,5 @@
-A lightweight, browser-based utility for developers and writers to instantly calculate the character and token count of any text. Using the same o200k_base tokenizer as modern GPT models, it provides an accurate measure of prompt length, helping to optimize API usage and manage context limits.
+**A simple, browser-based utility for analyzing text.**
+
+This tool provides accurate character and token counts for any given text, helping developers and writers optimize their workflows.
+
+**Privacy first:** All data remains on your browser — no information is transmitted or stored externally.
