@@ -16,6 +16,8 @@
     "@mantine/core": "^8.3.2",
     "@mantine/form": "^8.3.2",
     "@mantine/hooks": "^8.3.2",
+    "@uidotdev/usehooks": "2.4.1",
+    "js-tiktoken": "1.0.21",
     "react": "19.1.1",
     "react-dom": "19.1.1"
   },
