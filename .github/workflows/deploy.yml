@@ -5,6 +5,14 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  pages: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
