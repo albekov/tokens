@@ -18,6 +18,7 @@ function App() {
   const debouncedText = useDebounce(text, DEBOUNCE_DELAY);
 
   const textData = useMemo(() => {
+    if (!debouncedText) return undefined;
     const tokens = enc.encode(debouncedText);
     return {
       length: debouncedText.length,
@@ -39,18 +40,22 @@ function App() {
         </Grid.Col>
 
         <Grid.Col span={{ base: 12, md: 3 }}>
-          <Box mb="sm">
-            <Text span fw={700}>
-              Length:
-            </Text>{" "}
-            <Text span>{textData.length}</Text>
-          </Box>
-          <Box mb="sm">
-            <Text span fw={700}>
-              Tokens:
-            </Text>{" "}
-            <Text span>{textData.tokens.length}</Text>
-          </Box>
+          {textData && (
+            <>
+              <Box mb="sm">
+                <Text span fw={700}>
+                  Length:
+                </Text>{" "}
+                <Text span>{textData.length}</Text>
+              </Box>
+              <Box mb="sm">
+                <Text span fw={700}>
+                  Tokens:
+                </Text>{" "}
+                <Text span>{textData.tokens.length}</Text>
+              </Box>
+            </>
+          )}
         </Grid.Col>
       </Grid>
     </Container>
