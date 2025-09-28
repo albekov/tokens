@@ -1,10 +1,10 @@
 import { Grid } from "@mantine/core";
-import type { TextAnalysisResult } from "../../../types";
+import type { TextAnalysisResult } from "@/types";
 import {
   getFleschKincaidGradeInterpretation,
   getFleschReadingEaseInterpretation,
   getGunningFogInterpretation,
-} from "../../../utils";
+} from "@/utils";
 import { BaseCard } from "./BaseCard";
 
 interface TextStatisticsProps {

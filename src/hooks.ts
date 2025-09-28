@@ -3,10 +3,10 @@ import { useMemo } from "react";
 import readability from "text-readability";
 import model from "wink-eng-lite-web-model";
 import winkNLP from "wink-nlp";
-import { WORDS_PER_MINUTE_READING } from "../../../constants";
-import { enc } from "../../../lib/tokenizer";
-import type { TextAnalysisResult } from "../../../types";
-import { formatTime } from "../../../utils";
+import { WORDS_PER_MINUTE_READING } from "@/constants";
+import { enc } from "@/lib/tokenizer";
+import type { TextAnalysisResult } from "@/types";
+import { formatTime } from "@/utils";
 
 const nlp = winkNLP(model);
 const its = nlp.its;

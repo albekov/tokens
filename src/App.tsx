@@ -1,9 +1,9 @@
 import { Container, Grid, Textarea } from "@mantine/core";
 import { useDebounce } from "@uidotdev/usehooks";
 import { type ChangeEvent, useState } from "react";
-import { DEBOUNCE_DELAY } from "./constants";
-import { TextStatistics } from "./features/text-analyzer/components/TextStatistics";
-import { useTextAnalysis } from "./features/text-analyzer/hooks/useTextAnalysis";
+import { TextStatistics } from "@/components/TextStatistics";
+import { DEBOUNCE_DELAY } from "@/constants";
+import { useTextAnalysis } from "@/hooks";
 
 function App() {
   const [text, setText] = useState<string>("");

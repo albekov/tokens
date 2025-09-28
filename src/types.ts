@@ -1,5 +1,3 @@
-export type Statistic = { label: string; value: string | number };
-
 export type TextAnalysisResult = {
   characters: number;
   tokens: number;
